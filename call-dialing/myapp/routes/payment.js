@@ -14,6 +14,7 @@ paypal.configure({
     'client_id': 'ARy2xnp9Q2c-nr7Po8B8KjVb9TKQG__z-ZjX6YIqxEoD-fb1ZokxrbPOk0c0ygzo-pyQszz8t3oglviu',
     'client_secret': 'EBVstt-JupA9hWWZxzofGxWri9jDGw8oXtxO0Gk996jh9QyTWAKDN53ZESD7f6Ba4PR-tg1gZx-v4z52'
   });
+  
 
   
 // //Sand box Account details.
