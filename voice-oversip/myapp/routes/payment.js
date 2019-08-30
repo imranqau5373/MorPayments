@@ -34,8 +34,8 @@ var create_payment_json = {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "http://localhost:3000/#/paymentsuccess",
-        "cancel_url": "http://localhost:3000/payment/cancelPayment",
+      "return_url": "http://voiceoversip.com/admin/#/paymentsuccess",
+      "cancel_url": "http://voiceoversip.com/admin/#/cancelPayment",
         // "return_url": "paymentinteg/successPayment",
         // "cancel_url": "paymentinteg/cancelPayment",
     },
