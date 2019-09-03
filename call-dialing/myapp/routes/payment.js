@@ -35,8 +35,10 @@ var create_payment_json = {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-      "return_url": "http://calldialing.com/admin/#/paymentsuccess",
-      "cancel_url": "http://calldialing.com/admin/#/cancelPayment",
+      // "return_url": "http://calldialing.com/admin/#/paymentsuccess",
+      // "cancel_url": "http://calldialing.com/admin/#/cancelPayment",
+      "return_url": "http://localhost:3000/#/paymentsuccess",
+      "cancel_url": "http://localhost:3000/#/cancelPayment",
         // "return_url": "paymentinteg/successPayment",
         // "cancel_url": "paymentinteg/cancelPayment",
     },
@@ -133,9 +135,10 @@ router.get('/cancelPayment', function(req, res, next) {
             throw error;
         } else {
           let blanaceUpdate = billingAgreement.transactions[0].description;
+          console.log('Updated balance is ',blanaceUpdate);
             var options = { method: 'GET',
             url: 'http://62.138.16.114/billing/api/user_balance_update',
-            qs: { u: 'admin', user_id: userId,p_currency:currency,paymenttype:'Website',tax_in_amount:0, amount: blanaceUpdate, hash: '385c83488c' },
+            qs: { u: 'admin', user_id: userId,p_currency:currency,paymenttype:'Website',tax_in_amount:0, balance: blanaceUpdate, hash: '385c83488c' },
             headers: 
              { 'Postman-Token': '4a76cbbd-36ad-4434-9eb8-45bf6ae18086',
                'cache-control': 'no-cache' } };
