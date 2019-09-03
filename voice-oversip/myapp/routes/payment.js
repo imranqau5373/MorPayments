@@ -133,7 +133,7 @@ router.get('/cancelPayment', function(req, res, next) {
         } else {
           let blanaceUpdate = billingAgreement.transactions[0].description;
             var options = { method: 'GET',
-            url: 'http://62.138.16.114/billing/api/payment_create',
+            url: 'http://62.138.16.114/billing/api/user_balance_update',
             qs: { u: 'admin', user_id: userId,p_currency:currency,paymenttype:'Website',tax_in_amount:0, amount: blanaceUpdate, hash: '385c83488c' },
             headers: 
              { 'Postman-Token': '4a76cbbd-36ad-4434-9eb8-45bf6ae18086',
